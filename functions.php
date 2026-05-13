@@ -64,6 +64,8 @@ if ( ! function_exists( 'school_theme_setup' ) ) :
         ) );
 
         add_editor_style( 'assets/css/editor.css' );
+
+        add_theme_support( 'starter-content', school_theme_starter_content() );
     }
 endif;
 add_action( 'after_setup_theme', 'school_theme_setup' );
@@ -118,6 +120,7 @@ require_once SCHOOL_THEME_DIR . '/inc/customizer.php';
 require_once SCHOOL_THEME_DIR . '/inc/template-tags.php';
 require_once SCHOOL_THEME_DIR . '/inc/template-functions.php';
 require_once SCHOOL_THEME_DIR . '/inc/notices.php';
+require_once SCHOOL_THEME_DIR . '/inc/starter-content.php';
 
 if ( class_exists( 'WooCommerce' ) ) {
     require_once SCHOOL_THEME_DIR . '/inc/woocommerce.php';
