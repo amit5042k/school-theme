@@ -935,3 +935,77 @@ body.has-sidebar .post-grid { grid-template-columns: 1fr; }
 
 /* Hide non-WooCommerce wrap when WC active wrapping is replaced via filters */
 .woocommerce-main .woocommerce-products-header__title { margin-top: 1rem; }
+
+/* ------------------------------------------------------------------
+   24. Admissions / Message / Infrastructure / Results
+------------------------------------------------------------------ */
+.page-intro { margin-bottom: 2rem; }
+
+.admissions-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin: 2rem 0;
+}
+.admissions-card {
+    background: #fff;
+    border-radius: var(--st-radius);
+    padding: 1.5rem 1.6rem;
+    box-shadow: var(--st-shadow);
+}
+.admissions-card h3 { margin-top: .8rem; }
+.admissions-steps { margin: 0; padding-left: 1.2rem; }
+.admissions-steps li { margin-bottom: .35rem; }
+.admissions-downloads { margin-top: 2.5rem; }
+
+.message-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+    margin: 2rem 0;
+}
+@media (min-width: 900px) { .message-grid { grid-template-columns: 320px 1fr; } }
+.message-photo img { border-radius: var(--st-radius); width: 100%; }
+.message-photo-placeholder { aspect-ratio: 4/5; background: linear-gradient(135deg, #cde0ff, #ffe9b0); border-radius: var(--st-radius); }
+.message-meta {
+    margin-top: 1rem;
+    text-align: center;
+    background: var(--st-bg-alt);
+    padding: .8rem 1rem;
+    border-radius: var(--st-radius);
+}
+.message-meta strong { display: block; color: #0f1e3c; font-size: 1.05rem; }
+.message-meta span { color: var(--st-muted); font-size: .9rem; }
+.message-body { font-size: 1.02rem; }
+
+.facilities-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin: 2rem 0;
+}
+.facility-card {
+    background: #fff;
+    border-radius: var(--st-radius);
+    overflow: hidden;
+    box-shadow: var(--st-shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.facility-card:hover { transform: translateY(-4px); box-shadow: var(--st-shadow-hover); }
+.facility-thumb { display: block; aspect-ratio: 4/3; overflow: hidden; background: var(--st-bg-alt); }
+.facility-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.facility-card:hover .facility-thumb img { transform: scale(1.06); }
+.facility-thumb-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #cde0ff, #ffe9b0); }
+.facility-body { padding: 1.2rem 1.3rem 1.5rem; }
+.facility-title { margin: 0 0 .4rem; font-size: 1.1rem; }
+.facility-title a { color: #0f1e3c; }
+.facility-title a:hover { color: var(--st-primary); }
+.facility-excerpt { color: var(--st-muted); font-size: .92rem; margin-bottom: .5rem; }
+
+.results-filter { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.5rem; }
+.results-table-wrap { overflow-x: auto; background: #fff; border-radius: var(--st-radius); box-shadow: var(--st-shadow); }
+.results-table { width: 100%; border-collapse: collapse; min-width: 540px; }
+.results-table th, .results-table td { padding: .9rem 1.1rem; text-align: left; border-bottom: 1px solid var(--st-border); }
+.results-table th { background: var(--st-bg-alt); color: #0f1e3c; font-weight: 700; font-size: .92rem; text-transform: uppercase; letter-spacing: .04em; }
+.results-table tr:last-child td { border-bottom: 0; }
+.results-table a { font-weight: 600; }
