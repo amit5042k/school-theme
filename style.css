@@ -1,0 +1,17 @@
+/*
+Theme Name: School Theme
+Theme URI: https://example.com/school-theme
+Author: School Theme Team
+Author URI: https://example.com
+Description: A clean, responsive education-focused WordPress theme for schools, colleges, universities, and online course providers. Inspired by modern education site layouts, it includes a hero slider, courses grid, teachers section, testimonials, blog, and a fully widgetized footer.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: school-theme
+Tags: education, school, blog, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, full-width-template, theme-options, threaded-comments, translation-ready
+*/
+
+/* Core stylesheet is enqueued separately from assets/css/main.css */

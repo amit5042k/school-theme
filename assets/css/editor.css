@@ -1,0 +1,13 @@
+/* Block editor styles */
+body { font-family: 'Poppins', sans-serif; color: #2b3445; }
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 { color: #0f1e3c; font-weight: 700; }
+.editor-styles-wrapper a { color: #1f6feb; }
+.editor-styles-wrapper blockquote {
+    border-left: 4px solid #1f6feb;
+    background: #f5f7fb;
+    padding: 1em 1.5em;
+    font-style: italic;
+}
