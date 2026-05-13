@@ -117,6 +117,7 @@ require_once SCHOOL_THEME_DIR . '/inc/custom-post-types.php';
 require_once SCHOOL_THEME_DIR . '/inc/customizer.php';
 require_once SCHOOL_THEME_DIR . '/inc/template-tags.php';
 require_once SCHOOL_THEME_DIR . '/inc/template-functions.php';
+require_once SCHOOL_THEME_DIR . '/inc/notices.php';
 
 if ( class_exists( 'WooCommerce' ) ) {
     require_once SCHOOL_THEME_DIR . '/inc/woocommerce.php';

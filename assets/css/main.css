@@ -1009,3 +1009,52 @@ body.has-sidebar .post-grid { grid-template-columns: 1fr; }
 .results-table th { background: var(--st-bg-alt); color: #0f1e3c; font-weight: 700; font-size: .92rem; text-transform: uppercase; letter-spacing: .04em; }
 .results-table tr:last-child td { border-bottom: 0; }
 .results-table a { font-weight: 600; }
+
+/* ------------------------------------------------------------------
+   25. Notice ticker + Notices widget
+------------------------------------------------------------------ */
+.notice-ticker {
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border-bottom: 1px solid var(--st-border);
+    overflow: hidden;
+    font-size: .92rem;
+}
+.notice-ticker-label {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: var(--st-primary);
+    color: #fff;
+    padding: .6rem 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .82rem;
+    flex-shrink: 0;
+}
+.notice-ticker-viewport { flex: 1; overflow: hidden; position: relative; }
+.notice-ticker-track { list-style: none; margin: 0; padding: 0; display: flex; gap: 3rem; align-items: center; white-space: nowrap; transition: transform .4s ease; padding: .6rem 1rem; }
+.notice-ticker-track li { flex-shrink: 0; }
+.notice-ticker-track a { color: var(--st-text); display: inline-flex; align-items: center; gap: .5rem; }
+.notice-ticker-track a:hover { color: var(--st-primary); }
+.notice-ticker-controls { display: flex; flex-shrink: 0; border-left: 1px solid var(--st-border); }
+.notice-ticker-controls button {
+    background: transparent;
+    border: 0;
+    width: 36px;
+    cursor: pointer;
+    color: var(--st-muted);
+    transition: background .2s ease, color .2s ease;
+    font-size: .9rem;
+}
+.notice-ticker-controls button:hover { background: var(--st-bg-alt); color: var(--st-primary); }
+.ti-megaphone::before { content: "\1F4E2"; }
+
+.widget-notices { list-style: none; padding: 0; margin: 0; }
+.widget-notice-item { padding: .7rem 0; border-bottom: 1px solid var(--st-border); display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+.widget-notice-item:last-child { border-bottom: 0; }
+.widget-notice-date { font-size: .78rem; color: var(--st-muted); flex-basis: 100%; }
+.widget-notice-item a { color: #0f1e3c; font-weight: 500; font-size: .95rem; }
+.widget-notice-item a:hover { color: var(--st-primary); }

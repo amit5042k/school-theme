@@ -70,6 +70,50 @@
             slider.addEventListener('mouseenter', function () { clearInterval(auto); });
         });
 
+        // Notice ticker
+        document.querySelectorAll('[data-notice-ticker]').forEach(function (ticker) {
+            var track = ticker.querySelector('.notice-ticker-track');
+            var items = track ? track.children : [];
+            if (!track || items.length < 2) return;
+            var index = 0;
+            var paused = false;
+            var interval = null;
+
+            function offsetFor(i) {
+                var sum = 0;
+                var gap = parseFloat(getComputedStyle(track).gap) || 48;
+                for (var k = 0; k < i; k++) {
+                    sum += items[k].getBoundingClientRect().width + gap;
+                }
+                return sum;
+            }
+            function update() {
+                if (index >= items.length) index = 0;
+                if (index < 0) index = items.length - 1;
+                track.style.transform = 'translateX(' + (-offsetFor(index)) + 'px)';
+            }
+            function start() {
+                clearInterval(interval);
+                interval = setInterval(function () {
+                    if (paused) return;
+                    index++;
+                    update();
+                }, 4000);
+            }
+
+            var prev = ticker.querySelector('.ticker-prev');
+            var next = ticker.querySelector('.ticker-next');
+            var pause = ticker.querySelector('.ticker-pause');
+            if (prev) prev.addEventListener('click', function () { index--; update(); });
+            if (next) next.addEventListener('click', function () { index++; update(); });
+            if (pause) pause.addEventListener('click', function () { paused = !paused; pause.style.opacity = paused ? .5 : 1; });
+            ticker.addEventListener('mouseenter', function () { paused = true; });
+            ticker.addEventListener('mouseleave', function () { paused = false; });
+            window.addEventListener('resize', update);
+            update();
+            start();
+        });
+
         // Back to top
         var btt = document.querySelector('.back-to-top');
         if (btt) {

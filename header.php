@@ -102,3 +102,6 @@
     </header>
 
     <div id="content" class="site-content">
+    <?php if ( get_theme_mod( 'school_ticker_enable', true ) && function_exists( 'school_theme_render_ticker' ) ) {
+        echo school_theme_render_ticker(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+    } ?>

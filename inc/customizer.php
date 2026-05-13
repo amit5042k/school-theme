@@ -132,6 +132,10 @@ function school_theme_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'school_contact_map', array( 'default' => '', 'sanitize_callback' => 'wp_kses_post' ) );
     $wp_customize->add_control( 'school_contact_map', array( 'label' => __( 'Google Map Embed (iframe)', 'school-theme' ), 'section' => 'school_contact', 'type' => 'textarea' ) );
 
+    /* Notice ticker */
+    $wp_customize->add_setting( 'school_ticker_enable', array( 'default' => true, 'sanitize_callback' => 'school_theme_sanitize_bool' ) );
+    $wp_customize->add_control( 'school_ticker_enable', array( 'label' => __( 'Show Notice Ticker', 'school-theme' ), 'section' => 'school_contact', 'type' => 'checkbox' ) );
+
     /* Footer */
     $wp_customize->add_section( 'school_footer', array(
         'title'    => __( 'Footer', 'school-theme' ),
